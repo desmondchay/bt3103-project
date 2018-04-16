@@ -20,7 +20,7 @@ const styles = theme => ({
 
 class ControlledOpenSelect extends React.Component {
   state = {
-    age: '',
+    course: '',
     open: false,
   };
 
@@ -46,14 +46,15 @@ class ControlledOpenSelect extends React.Component {
         </Button>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="controlled-open-select">Course</InputLabel>
+
           <Select
             open={this.state.open}
             onClose={this.handleClose}
             onOpen={this.handleOpen}
-            value={this.state.age}
+            value={this.state.course}
             onChange={this.handleChange}
             inputProps={{
-              name: 'age',
+              name: 'course',
               id: 'controlled-open-select',
             }}
           >

@@ -43,6 +43,8 @@ db.ref("/").on("value", data => {
   }
 });
 
+export var ref = db.ref('/Recharts/IndividualUserUncompletedLevelPlaytime/zhaichels');
+
 render(
   <BrowserRouter>
     <Provider store={store}>
@@ -53,3 +55,4 @@ render(
 );
 
 //render(<App />, document.getElementById('root'));
+
