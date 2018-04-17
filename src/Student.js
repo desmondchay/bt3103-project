@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { Bar, BarChart, Pie, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import Typography from 'material-ui/Typography'
 import Test from "./Test"
-import { grey600, cyan400, cyan600, pink400, pink500, pink600, purple400, purple500, purple600, orange400, orange600, pink} from "material-ui/colors";
+import { red, grey600, cyan400, cyan600, pink400, pink500, pink600, purple400, purple500, purple600, orange400, orange600, pink} from "material-ui/colors";
 import {ref} from "./index.js"
 import TopBoxes from "./Data/TopBoxes"
 import ModeEdit from "@material-ui/icons/ModeEdit"
@@ -33,6 +33,7 @@ class Student extends React.Component {
 
   render() {
     var help = [];
+
     ref.on("value", function (snap) {
       snap.forEach(function (childSnapshot) {
         var value = childSnapshot.val();
@@ -41,7 +42,6 @@ class Student extends React.Component {
     }
     );
 
-    console.log(help)
     return (   
       <div>
         <AppFrame>
@@ -123,8 +123,8 @@ class Student extends React.Component {
                 return <div key={index}>{x.level}</div>;
               })}
               title="Uncompleted Levels"
-              iconColor={pink600}
-              boxColor={pink400}
+              iconColor={red}
+              boxColor={red}
             />
           </div>
 

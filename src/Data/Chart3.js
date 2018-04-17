@@ -9,6 +9,7 @@ import Typography from 'material-ui/Typography'
 
 class RechartsComp extends React.Component {
   render() {
+    this.props.charts.Recharts.TopUncompletedLevels;
     return (
       <div>
         <center>

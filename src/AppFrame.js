@@ -16,7 +16,7 @@ import AppDrawer from './AppDrawer'
 import { AppBarMenuItemsExport } from './AppDrawerElements'
 
 import { APP_SETTING } from './config'
-
+import {white} from "material-ui/colors"
 
 const styles = theme => ({
   '@global': {

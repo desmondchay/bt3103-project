@@ -10,6 +10,7 @@ import Typography from 'material-ui/Typography'
 
 class Dashboard extends React.Component {
   render() {
+    this.props.charts.Recharts.TopCompletedLevels;
     return (
       <div><center>
         <Typography variant="title" gutterBottom>

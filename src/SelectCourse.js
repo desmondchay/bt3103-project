@@ -26,6 +26,7 @@ class ControlledOpenSelect extends React.Component {
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
+
   };
 
   handleClose = () => {
@@ -36,14 +37,24 @@ class ControlledOpenSelect extends React.Component {
     this.setState({ open: true });
   };
 
+  handleSubmit(event) {
+    alert('Pushing to Firebase to generate charts for ' + this.state.course + '...');
+    
+    event.preventDefault();
+  };
+
   render() {
     const { classes } = this.props;
 
     return (
-      <form autoComplete="off">
-        <Button className={classes.button} onClick={this.handleOpen}>
-          Choose Your Course
-        </Button>
+      <form 
+      autoComplete="off"
+      onSubmit={this.handleSubmit}>
+
+      <div>
+      Choose Your Course
+      </div>
+
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="controlled-open-select">Course</InputLabel>
 
@@ -72,6 +83,7 @@ class ControlledOpenSelect extends React.Component {
             <MenuItem value={"Temasek JC - Junior (NCC2018)"}>Temasek JC - Junior (NCC2018)</MenuItem>
           </Select>
         </FormControl>
+        <input type="submit" value="Submit" />
       </form>
     );
   }
