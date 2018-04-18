@@ -3,19 +3,7 @@ import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import Root from "./Router";
 import firebase from "firebase";
-import AppFrame from "./AppFrame";
 import Dashboard from "react-dazzle";
-import {
-  PieChart,
-  Pie,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend
-} from "recharts";
 import { Provider } from "react-redux";
 import store from "./store";
 //const {XAxis, YAxis, CartesianGrid, Tooltip, Legend} = Recharts;
@@ -34,7 +22,7 @@ try {
   firebase.initializeApp(config);
 } catch (error) {}
 
-var db = firebase.database();
+export var db = firebase.database();
 db.ref("/").on("value", data => {
   if (data.val()) {
     store.dispatch({ type: "SET_VAL", payload: data.val() });
@@ -43,7 +31,6 @@ db.ref("/").on("value", data => {
   }
 });
 
-export var ref = db.ref('/Recharts/IndividualUserUncompletedLevelPlaytime/zhaichels');
 
 render(
   <BrowserRouter>

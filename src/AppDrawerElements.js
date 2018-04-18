@@ -8,7 +8,7 @@ import StarIcon from "material-ui-icons/Star";
 
 export const DrawerMenuItems = (
   <div>
-    <Link className="linkStyle" to="/">
+    <Link className="linkStyle" to="/app">
       <ListItem button>
         <ListItemIcon>
           <StarIcon />
@@ -53,12 +53,14 @@ export const DrawerMenuItems = (
     </List>
     <Divider />
     <List>
+    <Link className="linkStyle" to="/about">
       <ListItem button>
         <ListItemIcon>
           <StarIcon />
         </ListItemIcon>
         <ListItemText primary="About" />
       </ListItem>
+      </Link>
     </List>
   </div>
 );
