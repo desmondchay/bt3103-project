@@ -4,15 +4,10 @@ import List, { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
 import Divider from "material-ui/Divider";
 import { MenuItem } from "material-ui/Menu";
 
-import StarIcon from "material-ui-icons/Star";
-
 export const DrawerMenuItems = (
-  <div>
+  <div><center>
     <Link className="linkStyle" to="/app">
       <ListItem button>
-        <ListItemIcon>
-          <StarIcon />
-        </ListItemIcon>
         <ListItemText primary="Home" />
       </ListItem>
     </Link>
@@ -20,34 +15,22 @@ export const DrawerMenuItems = (
     <List>
       <Link className="linkStyle" to="/student">
         <ListItem button>
-          <ListItemIcon>
-            <StarIcon />
-          </ListItemIcon>
-          <ListItemText primary="Student View" />
+          <ListItemText primary="Student" />
         </ListItem>
       </Link>
       <Link className="linkStyle" to="/course">
         <ListItem button>
-          <ListItemIcon>
-            <StarIcon />
-          </ListItemIcon>
-          <ListItemText primary="Course Coordinator View" />
+          <ListItemText primary="Course" />
         </ListItem>
       </Link>
       <Link className="linkStyle" to="/cohort">
         <ListItem button>
-          <ListItemIcon>
-            <StarIcon />
-          </ListItemIcon>
-          <ListItemText primary="Cohort Coordinator View" />
+          <ListItemText primary="Cohort" />
         </ListItem>
       </Link>
       <Link className="linkStyle" to="/overall">
         <ListItem button>
-          <ListItemIcon>
-            <StarIcon />
-          </ListItemIcon>
-          <ListItemText primary="Overall View" />
+          <ListItemText primary="Overall" />
         </ListItem>
       </Link>
     </List>
@@ -55,13 +38,10 @@ export const DrawerMenuItems = (
     <List>
     <Link className="linkStyle" to="/about">
       <ListItem button>
-        <ListItemIcon>
-          <StarIcon />
-        </ListItemIcon>
         <ListItemText primary="About" />
       </ListItem>
       </Link>
-    </List>
+    </List></center>
   </div>
 );
 

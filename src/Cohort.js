@@ -5,6 +5,7 @@ import Dashboard from 'react-dazzle';
 import { Bar, BarChart, Pie, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { compose } from 'redux'
 import { connect } from 'react-redux'
+import Test from './Test';
 
 var db;
 
@@ -41,7 +42,7 @@ class RechartsComp extends React.Component {
       <AppFrame>  
       <p>
       <form>
-        <html>Select Your Cohort</html>
+        Select Your Cohort:
         <select
       onChange={this.handleChange} 
       placeholder="Select Course" 
@@ -62,7 +63,7 @@ class RechartsComp extends React.Component {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="y" stroke="#8884d8" />
+        <Line type="monotone" dataKey="y" stroke="#e75466" />
         </LineChart> }
 
       </AppFrame>

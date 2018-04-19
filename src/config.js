@@ -1,3 +1,3 @@
 export const APP_SETTING = {
-  DrawerWidth: 200,
+  DrawerWidth: 150,
 }

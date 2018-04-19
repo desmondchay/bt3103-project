@@ -44,6 +44,7 @@ const styles = theme => ({
     width: '100%',
   },
   appBarTitle: {
+    color: "#d1cf94",
     flex: 1,
   },
   appFrame: {
