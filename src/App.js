@@ -7,11 +7,9 @@ class App extends React.Component{
   render(){
     return(
       <AppFrame>
+
       </AppFrame>
     )
   }
 }
-
 export default App;
-
-

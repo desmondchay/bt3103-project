@@ -6,7 +6,7 @@ import Paper from 'material-ui/Paper';
 
 export default class Home extends Component {
   render () {
-  const {iconColor, boxColor, data, title } = this.props;
+  const {iconColor, boxColor, data, title} = this.props;
   const styles = {
     paper: {
       backgroundColor: boxColor,
@@ -29,6 +29,7 @@ export default class Home extends Component {
       fontWeight: typography.fontWeightLight,
       marginBottom: 20
     }
+
   };
 
     return (

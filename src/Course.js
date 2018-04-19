@@ -12,7 +12,7 @@ import MenuItem from 'material-ui/Menu';
 import Typography from 'material-ui/Typography';
 import TopBoxes from './Data/TopBoxes';
 import { grey600, cyan400, cyan600, pink400, pink500, pink600, purple400, purple500, purple600, orange400, orange600, pink} from "material-ui/colors";
-import ModeEdit from "@material-ui/icons/ModeEdit"
+import {ModeEdit, Bookmark, Archive, People, Timer, Assignment} from "@material-ui/icons"
 import { InputLabel } from 'material-ui/Input';
 import { FormControl } from 'material-ui/Form';
 import Select from 'material-ui/Select';
@@ -20,6 +20,11 @@ import PropTypes from 'prop-types';
 import {db} from './index.js'
 
 var db5;
+
+const styles = {
+  boxSize: {
+  marginRight: 20,
+  },};
 
 class RechartsComp extends React.Component {
   constructor(props) {
@@ -83,7 +88,6 @@ class RechartsComp extends React.Component {
     return (
       <AppFrame>
 
-        <p>
       <form>
         Select Your Course:  
         <select
@@ -105,59 +109,58 @@ class RechartsComp extends React.Component {
       <option value="Temasek JC - Junior (NCC2018)">Temasek JC - Junior (NCC2018)</option>
   </select>
         </form>
-        </p>
+
+ <br/>
 
         {this.state.isSelected&&
       <center>
         <Typography variant="title" gutterBottom>
         CodeCombat Charts for Course {this.state.value}</Typography>
         </center>}
+<br/>
 
 {this.state.isSelected&&
-          <p><div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-b-15">
+  <div className ="top-row-display">
+  <center>
           <TopBoxes
-            Icon={ModeEdit}
+            Icon={People}
             title="Number of Students Enrolled"
+            style={styles.boxSize}
             prefix=""
             value={db1}
             iconColor={pink600}
+            boxColor={pink400}/>            
+            
+          <TopBoxes
+            Icon={Bookmark}
+            title="Median, Levels Completed" 
+            prefix=""
+            value={db2}
+            iconColor={pink600}
             boxColor={pink400}/>
-            </div></p>}
-            
-            {this.state.isSelected&&
-            <p><div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-b-15">
-            <TopBoxes
-              Icon={ModeEdit}
-              title="Median, Levels Completed" 
-              prefix=""
-              value={db2}
-              iconColor={pink600}
-              boxColor={pink400}/>
-            </div></p>}
-            
-            {this.state.isSelected&&
-            <p><div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-b-15">
-            <TopBoxes
-            Icon={ModeEdit}
+        </center>
+        </div>}        
+
+  {this.state.isSelected&&
+  <div className ="top-row-display">
+  <center>
+          <TopBoxes
+            Icon={Timer}
             title="Median, Total Playtime"
             prefix=""
             value={db3}
             iconColor={pink600}
             boxColor={pink400}/>
-            </div></p>}
-            
-            {this.state.isSelected&&
-            <p><div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-b-15">
-            <TopBoxes
-            Icon={ModeEdit}
+          <TopBoxes
+            Icon={Assignment}
             title="Median, Total Achievements"
             prefix=""
             value={db4}
             iconColor={pink600}
             boxColor={pink400}/>
-            </div></p>}
-
-          <p><div>
+</center>
+</div>}        
+ 
 
           {this.state.isSelected &&
           <div>
@@ -175,8 +178,6 @@ class RechartsComp extends React.Component {
           <Bar dataKey="courseAveragePlaytime" fill="#8884d8" />
           </BarChart></div>}
 
-          </div></p>
-            
       </AppFrame>
     );
   }

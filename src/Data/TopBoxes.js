@@ -5,7 +5,7 @@ import Paper from 'material-ui/Paper';
 
 export default class Home extends Component {
   render () {
-  const {title, value, iconColor, boxColor, prefix} = this.props;
+  const {title, value, iconColor, boxColor, prefix, paperSpan} = this.props;
   const Icon = this.props.Icon
 // NOTE: When passing a funciton (IE the Icon) then must use a capital where passing it as a prop.
   const styles = {
@@ -51,9 +51,13 @@ export default class Home extends Component {
           position: 'relative',
           bottom:3.5,
         },
+        paperSpan: {
+          width: '350px',
+          display: 'inline-table',
+        }
   };
     return (
-      <Paper>
+      <Paper style={styles.paperSpan}>
         <span style={styles.iconSpan}>
             <Icon style={styles.icon} />
         </span>

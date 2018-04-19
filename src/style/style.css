@@ -1,0 +1,17 @@
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .top-row-display {
+    padding-left: 20em;
+    padding-right: 20em;
+    font-weight: 100;
+    padding: 4px 4px;
+    display: table;
+    margin: 0 auto;
+  }
+
+  .row-one-display {
+      width: 20%;
+  }

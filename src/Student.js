@@ -9,10 +9,15 @@ import Test from "./Test"
 import { red, grey600, cyan400, cyan600, pink400, pink500, pink600, purple400, purple500, purple600, orange400, orange600, pink} from "material-ui/colors";
 import {db} from "./index.js"
 import TopBoxes from "./Data/TopBoxes"
-import ModeEdit from "@material-ui/icons/ModeEdit"
 import PropTypes from 'prop-types';
+import {Bookmark, Timer, Assignment} from "@material-ui/icons"
 
 var db4;
+const styles = {
+  boxSize: {
+  marginRight: 20,
+  },};
+
 
 class Student extends React.Component {
   constructor(props) {
@@ -157,83 +162,90 @@ class Student extends React.Component {
             Showing Charts for： {this.state.submitvalue}</Typography>
             </center>}
 
-            {this.statechanged.userstate&&         
-            <p>
+{this.statechanged.userstate&&
+  <div className ="top-row-display">
+  <center>
             <TopBoxes
-              Icon={ModeEdit}
+              Icon={Bookmark}
               title="Levels Completed"
+              style={styles.boxSize}
               prefix=""
               value={db1}
               iconColor={pink600}
               boxColor={pink400}/>
-              </p>}
 
-              {this.statechanged.coursestate&&
-            <p>
             <TopBoxes
-              Icon={ModeEdit}
-              title="Median, Levels Completed for your Course"
-              prefix=""
-              value={db5}
-              iconColor={pink600}
-              boxColor={pink400}/>
-              </p>}
-
-              {this.statechanged.userstate&&             
-              <p>
-              <TopBoxes
-              Icon={ModeEdit}
-              title="Total playtime"
-              prefix=""
-              value={db2}
-              iconColor={pink600}
-              boxColor={pink400}/>
-              </p>}
-
-              {this.statechanged.coursestate&&
-              <p>
-              <TopBoxes
-              Icon={ModeEdit}
-              title="Median, Total playtime for your Course"
-              prefix=""
-              value={db6}
-              iconColor={pink600}
-              boxColor={pink400}/>
-              </p>}
-
-              {this.statechanged.userstate&&
-              <p>
-              <TopBoxes
-              Icon={ModeEdit}
+              Icon={Assignment}
               title="Total Achievements"
               prefix=""
               value={db3}
               iconColor={pink600}
               boxColor={pink400}/>
-              </p>}
+            
+            <TopBoxes
+              Icon={Timer}
+              title="Total playtime"
+              prefix=""
+              value={db2}
+              iconColor={pink600}
+              boxColor={pink400}/>
+        </center>
+        </div>}    
 
-              {this.statechanged.coursestate&&
-              <p>
-              <TopBoxes
-              Icon={ModeEdit}
-              title="Median, Total achievements for your Course"
+        {this.statechanged.coursestate&&
+  <div className ="top-row-display">
+  <center>
+
+            <TopBoxes
+              Icon={Bookmark}
+              title="Median, Levels Completed(Course)"
+              prefix=""
+              value={db5}
+              iconColor={pink600}
+              boxColor={pink400}/>
+
+            <TopBoxes
+              Icon={Assignment}
+              title="Median, Total achievements(Course)"
               prefix=""
               value={db7}
               iconColor={pink600}
               boxColor={pink400}/>
-              </p>}
 
-              {this.statechanged.userstate&&
-          <p>
-            <Test
-              data={help.map((x, index) => {
-                return <div key={index}>{x.level}</div>;
-              })}
-              title="Uncompleted Levels"
-              iconColor={red}
-              boxColor={red}
-            />
-          </p>}
+            <TopBoxes
+              Icon={Timer}
+              title="Median, Total playtime(Course)"
+              prefix=""
+              value={db6}
+              iconColor={pink600}
+              boxColor={pink400}/>
+
+        </center>
+        </div>}       
+<br/>
+{this.statechanged.userstate&&
+<div className ="top-row-display">
+<center>
+      <Test
+      data={help.map((x, index) => {
+      return <div key={index}>{x.level}</div>;
+      })}
+      title="Uncompleted Levels"
+      iconColor={red}
+      boxColor={red}
+      />
+
+      <Test
+      data={help.map((x, index) => {
+      return <div key={index}>{x.level}</div>;
+      })}
+      title="Uncompleted Levels"
+      iconColor={red}
+      boxColor={red}
+      />
+
+</center>
+</div>}
 
       {this.statechanged.userstate&&
           <p>
