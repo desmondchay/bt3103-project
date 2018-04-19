@@ -1,7 +1,7 @@
 import { render } from 'react-dom';
 import AppFrame from './AppFrame'
 import Dashboard from 'react-dazzle';
-import {BarChart,Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {LabelList,ResponsiveContainer,BarChart,Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import {compose} from 'redux'
 import {connect} from 'react-redux'
 import React, { Component } from 'react';
@@ -90,11 +90,18 @@ class Course extends React.Component {
       placeholder="Select Course" 
       value={this.state.value}>
       <option value="">None</option>
+      <option value="All Other Junior (NCC2018)">All Other Junior (NCC2018)</option>
+      <option value="All Other Senior (NCC2018)">All Other Senior (NCC2018)</option>
+      <option value="Anglo-Chinese Sch Primary (NCC2018)">Anglo-Chinese Sch Primary (NCC2018)</option>
       <option value="BT3103">BT3103</option>
+      <option value="CHIJ St Nicholas Girls School (NCC2018)">CHIJ St Nicholas Girls School (NCC2018)</option>
+      <option value="Clementi Town Secondary School (NCC2018)">Clementi Town Secondary School (NCC2018)</option>
+      <option value="Crest Secondary School (NCC2018)">Crest Secondary School (NCC2018)</option>
       <option value="Developers">Developers</option>
       <option value="Dunman High School - Senior (NCC2018)">Dunman High School - Senior (NCC2018)</option>
       <option value="Dunman HS - Junior (NCC2018)">Dunman HS - Junior (NCC2018)</option>
       <option value="Junyuan Secondary School (NCC2018)">Junyuan Secondary School (NCC2018)</option>
+      <option value="Jurong JC (NCC2018)">Jurong JC (NCC2018)</option>
       <option value="Maris Stella High School (NCC2018)">Maris Stella High School (NCC2018)</option>
       <option value="Nan Hua High School (NCC2018)">Nan Hua High School (NCC2018)</option>
       <option value="National JC - Junior (NCC2018)">National JC - Junior (NCC2018)</option>
@@ -110,7 +117,6 @@ class Course extends React.Component {
       <option value="Queensway Secondary School (NCC2018)">Queensway Secondary School (NCC2018)</option>
       <option value="West Spring Secondary School (NCC2018)">West Spring Secondary School (NCC2018)</option>
       <option value="Yishun JC (NCC2018)">Yishun JC (NCC2018)</option>
-
   </select>
         </form>
         </p>
@@ -126,7 +132,10 @@ class Course extends React.Component {
 {this.state.isSelected&&
   <Grid container spacing={24}>
   
-  <Grid item xs={6}>
+  <Grid item xs={1}>
+  </Grid>
+
+  <Grid item xs={4}>
   <TopBoxes
             Icon={People}
             title="Number of Students Enrolled"
@@ -135,8 +144,11 @@ class Course extends React.Component {
             iconColor="#e75466"
             boxColor="#edf2f4"/>  
   </Grid>
+
+  <Grid item xs={2}>
+  </Grid>
   
-  <Grid item xs={6}>
+  <Grid item xs={4}>
   <TopBoxes
             Icon={Bookmark}
             title="Median, Levels Completed" 
@@ -145,9 +157,16 @@ class Course extends React.Component {
             iconColor="#e75466"
             boxColor="#edf2f4"/>
   </Grid>   
+
+    <Grid item xs={1}>
+  </Grid>
+
   <br/>
 
-  <Grid item xs={6}>
+  <Grid item xs={1}>
+  </Grid>
+
+  <Grid item xs={4}>
           <TopBoxes
             Icon={Timer}
             title="Median, Total Playtime"
@@ -157,7 +176,10 @@ class Course extends React.Component {
             boxColor="#edf2f4"/>
 </Grid>
 
-<Grid item xs={6}>
+  <Grid item xs={2}>
+  </Grid>
+
+<Grid item xs={4}>
           <TopBoxes
             Icon={Assignment}
             title="Median, Total Achievements"
@@ -167,24 +189,38 @@ class Course extends React.Component {
             boxColor="#edf2f4"/>
 </Grid>
 
+  <Grid item xs={1}>
+  </Grid>
+
 <br/>
 
-  <Grid item xs={12}>
+  <Grid item xs={1}>
+  </Grid>
+
+  <Grid item xs={10}>
           <div>
 
           <Typography variant="title" gutterBottom>
           Top 10 Highest Average Completed Levels Playtime for {this.state.value}
           </Typography>
 
-          <BarChart width={1000} height={450} data={db5}>
+          <ResponsiveContainer width="100%" height={300}>
+          <BarChart data={db5}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="levelName" hide="true" />
           <YAxis dataKey="courseAveragePlaytime" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="courseAveragePlaytime" fill="#aedde8" />
-          </BarChart></div>
+          <Bar dataKey="courseAveragePlaytime" fill="#aedde8" >
+          <LabelList dataKey="levelName" position="insideop" angle="45" />
+          </Bar>
+          </BarChart>
+          </ResponsiveContainer>
+          </div>
 </Grid>
+
+  <Grid item xs={1}>
+  </Grid>
 </Grid>}        
  
 

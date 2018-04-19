@@ -2,10 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import AppFrame from './AppFrame'
 import Dashboard from 'react-dazzle';
-import { Bar, BarChart, Pie, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LabelList,ResponsiveContainer, Bar, BarChart, Pie, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import Test from './Test';
+import Typography from 'material-ui/Typography'
 
 var db;
 
@@ -54,17 +55,27 @@ class RechartsComp extends React.Component {
       </select>
         </form>
         </p>
+
+        <br/>
         
         {this.state.isSelected &&
-        <LineChart width={730} height={250} data={db}
+<div>
+<Typography variant="title" gutterBottom>
+Number of Users in each Course for {this.state.value}
+</Typography>
+
+        <ResponsiveContainer width="100%" height={250}>
+        <LineChart data={db}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="x" />
+        <XAxis dataKey="x" hide="true" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="y" stroke="#e75466" />
-        </LineChart> }
+        <Line type="monotone" dataKey="y" stroke="#e75466">
+        </Line>
+        </LineChart> 
+        </ResponsiveContainer></div>}
 
       </AppFrame>
     );

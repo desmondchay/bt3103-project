@@ -72,6 +72,13 @@ class Student extends React.Component {
     }
     );
 
+    var help3;
+    var ref = db.ref('/Recharts/IndividualUserLevelsLastPlayed/'+this.state.submitvalue+'/lastVisit');
+    ref.on("value", function (snap) {
+        help3= snap.val();
+    }
+    );
+
     const db1=[]
     var ref1 = db.ref('/Recharts/IndividualUserCompletedLevelCount/'+this.state.submitvalue+"/levelscompleted");
     ref1.on("value", data => {
@@ -204,7 +211,7 @@ class Student extends React.Component {
               iconColor="#e75466"
               boxColor="#edf2f4"/>
   </Grid>
-  
+
   <Grid item xs={4}>
   <TopBoxes
               Icon={Timer}
@@ -214,6 +221,8 @@ class Student extends React.Component {
               iconColor="#e75466"
               boxColor="#edf2f4"/>
   </Grid>
+
+
   </Grid>}       
   <br/>
 
@@ -248,6 +257,7 @@ class Student extends React.Component {
               value={db6}
               iconColor="#e75466"
               boxColor="#edf2f4"/>
+
 </Grid>
 </Grid>}       
 <br/>
@@ -271,7 +281,7 @@ class Student extends React.Component {
       data={help2.slice(0, 6).map((x, index) => {
       return <div key={index}>{x.levelName}</div>;
       })}
-      title="Levels Last Played"
+      title={"Levels Last Played on " +help3}
       iconColor="#e75466"
       boxColor="	#edf2f4"
       />
@@ -282,7 +292,8 @@ class Student extends React.Component {
         <Typography variant="title" gutterBottom>
           Completed Levels Playtime
       </Typography></center>
-        <BarChart width={500} height={450} data={db4}>
+      <ResponsiveContainer width="100%" height={450}>
+        <BarChart data={db4}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="level" hide="true" />
         <YAxis dataKey="playtime" />
@@ -290,6 +301,7 @@ class Student extends React.Component {
         <Legend />
         <Bar dataKey="playtime" fill="#e75466" />
         </BarChart>    
+        </ResponsiveContainer>
 </Grid>
 
 <Grid item xs={6}>
@@ -297,7 +309,8 @@ class Student extends React.Component {
         <Typography variant="title" gutterBottom>
           Completed Levels Playtime
       </Typography></center>
-        <BarChart width={500} height={450} data={db4}>
+      <ResponsiveContainer width="100%" height={450}>
+        <BarChart data={db4}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="level" hide="true" />
         <YAxis dataKey="playtime" />
@@ -305,6 +318,7 @@ class Student extends React.Component {
         <Legend />
         <Bar dataKey="playtime" fill="#e75466" />
         </BarChart>    
+        </ResponsiveContainer>
 </Grid>
 
 </Grid>}
