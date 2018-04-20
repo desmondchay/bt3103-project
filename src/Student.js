@@ -8,9 +8,7 @@ import Typography from 'material-ui/Typography'
 import Test from "./Test"
 import {db} from "./index.js"
 import TopBoxes from "./Data/TopBoxes"
-import PropTypes from 'prop-types';
 import {Bookmark, Timer, Assignment} from "@material-ui/icons"
-import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 
 var db4;
@@ -287,7 +285,7 @@ class Student extends React.Component {
       />
 </Grid>
 
-<Grid item xs={6}>   
+<Grid item xs={12}>   
 <center>
         <Typography variant="title" gutterBottom>
           Completed Levels Playtime
@@ -303,24 +301,6 @@ class Student extends React.Component {
         </BarChart>    
         </ResponsiveContainer>
 </Grid>
-
-<Grid item xs={6}>
-<center>
-        <Typography variant="title" gutterBottom>
-          Completed Levels Playtime
-      </Typography></center>
-      <ResponsiveContainer width="100%" height={450}>
-        <BarChart data={db4}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="level" hide="true" />
-        <YAxis dataKey="playtime" />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="playtime" fill="#e75466" />
-        </BarChart>    
-        </ResponsiveContainer>
-</Grid>
-
 </Grid>}
 
         </AppFrame>

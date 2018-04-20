@@ -9,9 +9,10 @@ import { connect } from 'react-redux'
 import Typography from 'material-ui/Typography'
 import Grid from 'material-ui/Grid';
 import TopBoxes from './Data/TopBoxes';
-import {Assignment} from "@material-ui/icons"
+import {Assignment, Bookmark, Timer} from "@material-ui/icons"
+import {db} from "./index.js"
 
-var data1,data2,data3,data4,db1;
+var data1,data2,data3,data4;
 
 class Test extends React.Component{
     constructor(props) {
@@ -20,10 +21,28 @@ class Test extends React.Component{
     data2=this.props.charts.Recharts.TopCompletedLevels;
     data3=this.props.charts.Recharts.TopUncompletedLevels;
     data4=this.props.charts.Recharts.TopCompletedLevelsTotalPlaytime;
-    db1=this.props.charts.Recharts.UsersOnPlatforms;
   }
 
         render(){
+          var db1;
+          var ref = db.ref('/Recharts/MedianforOverall/0/totallevelcount');
+          ref.on("value", function (snap) {
+              db1= snap.val();
+              console.log(db1)
+          }
+          );
+          var db2;
+          var ref = db.ref('/Recharts/MedianforOverall/3/totalplaytime');
+          ref.on("value", function (snap) {
+              db2= snap.val();
+          }
+          );
+          var db3;
+          var ref = db.ref('/Recharts/MedianforOverall/6/totalachievements');
+          ref.on("value", function (snap) {
+              db3= snap.val();
+          }
+          );
       return(
      <AppFrame>
 
@@ -84,7 +103,7 @@ boxColor="#edf2f4"/>
 <Grid item xs={12}>
        <p>
         <Typography variant="title" gutterBottom>
-          Course Registration Across All Cohorts
+          Users on Achievements Across All Courses
       </Typography>
       <ResponsiveContainer width="100%" height={250}>
           <LineChart data={data1}
@@ -94,10 +113,41 @@ boxColor="#edf2f4"/>
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="y" stroke="#8884d8" />
+            <Line type="monotone" dataKey="y" stroke="#e75466" />
           </LineChart>
           </ResponsiveContainer></p>
 </Grid>
+
+
+  <Grid item xs={4}>
+  <TopBoxes
+              Icon={Bookmark}
+              title="Median Levels Attempted"
+              prefix=""
+              value={db1}
+              iconColor="#e75466"
+              boxColor="#edf2f4"/>
+  </Grid>
+  
+  <Grid item xs={4}>
+  <TopBoxes
+              Icon={Assignment}
+              title="Median Total Playtime"
+              prefix=""
+              value={db2}
+              iconColor="#e75466"
+              boxColor="#edf2f4"/>
+  </Grid>
+
+  <Grid item xs={4}>
+  <TopBoxes
+              Icon={Timer}
+              title="Median Achievements"
+              prefix=""
+              value={db3}
+              iconColor="#e75466"
+              boxColor="#edf2f4"/>
+  </Grid>
 
 <Grid item xs={6}>
           <p>
