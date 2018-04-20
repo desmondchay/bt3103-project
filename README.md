@@ -11,8 +11,7 @@ Click on Cohort for to look at statistics and charts targeted at managers/coordi
 
 Click on Overall for to look at statistics and charts targeted at the developer of the Analytics Application or the overall coordinator of the National Coding Championships
 
-+ [Video Walkthrough](https://www.youtube.com/watch?v=oRf20ENBi6M)
-
++ [Video Walkthrough](https://www.youtube.com/watch?v=t572eaETwKI&feature=youtu.be)
 
 ## ====================================================
 # Documentation
