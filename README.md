@@ -1,4 +1,4 @@
-﻿﻿## ====================================================
+## ====================================================
 # Documentation
 
 ## 1. Preface
@@ -50,33 +50,33 @@ Students would be interested in knowing their overall progress and how they fair
 The analytics for the student view will allow students to view their progress in terms of the number of levels completed, their total playtime, and the number of achievements they have obtained. Medians of these statistics computed from all the students in the same course will be provided so that students can compare their statistics with the rest of the course. Additionally, students will be able to view levels that they have yet to complete and their playtime generated in each of the levels.
 
 **Statistics provided**
-* Levels Completed
-* Median Levels Completed for your Course
-* Total Playtime
-* Median Total Playtime for your Course
+CodeCombat
 * Total Achievements
+* Total Levels Completed
+* Total Playtime
 * Median Total Achievements for your Course
+* Median Levels Completed for your Course
+* Median Total Playtime for your Course
 * List of Uncompleted Levels
-* Playtime for each Level
+* List of Levels Last Played
+* Playtime for each Level Completed
 
 #### 2.3.2 Course Coordinator
 **Who are they?**
 In the program, each course of students will have one or more course coordinators to oversee the course that their students are in. These course coordinators mainly come from the educational institutes that the students are enrolled in. 
 
-
 **What are they looking for?**
 Course Coordinators would be interested in knowing which levels students are confident in also which levels students are struggling with. Additionally, they would like to know which students are underperforming in the course and the recent user activity among students in their course.
 
 **How does the application provide what they need?**
-The analytics for the Course Coordinator view will allow Course Coordinators to observe the levels which are completed the most and uncompleted the most. This allows the coordinators to have a clear picture of which levels students are struggling the most in and hence can intervene and clarify doubts in the respective areas. Additionally, statistics about the playtime of each level and the number of levels completed in the course will be displayed for coordinators to understand the general performance of the course and to flag students who are underperforming.
+The analytics for the Course Coordinator view will allow Course Coordinators to have a clear picture of which levels students are struggling the most in and hence can intervene and clarify doubts in the respective areas. For example, by looking at the average playtime of completed levels where students are spending the most time on, coordinators can propose to having a live teaching session on the specific level to clarify doubts of students.
 
 **Statistics provided**
-* Top Completed Levels
-* Top Uncompleted Levels
-* Levels with Highest Average Playtime
-* Median Levels Completed
-* Average Levels Completed 
-* Number of each Level Completed in last 7 Days
+* Number of Students Enrolled in the Course
+* Median of CodeCombat Levels Completed in the Course
+* Median of Total Playtime on CodeCombat
+* Median of Total Achievements obtained on CodeCombat
+* Top 10 Completed Levels with the highest playtime spent
 
 #### 2.3.3 Cohort Coordinator
 **Who are they?**
@@ -86,37 +86,35 @@ The Cohort Coordinators are individuals who oversee the courses in their specifi
 Cohort Coordinators would be interested in knowing the statistics for the cohort that they are supervising so as to keep track of the progress of students in the National Coding Championships. 
 
 **How does the application provide what they need?**
-The analytics for the Cohort Coordinators will allow the respective Coordinators to view which levels students are lagging behind in and also evaluate the top performers in the championships. The descriptive statistic help them decide the benchmark of performance in the competition and can help them re-evaluate the guidelines of the competition if the need arises.
+The analytics for the Cohort Coordinators will allow the respective Coordinators to view which courses in a specific cohort have low participation, and can seek to intervene, perhaps by sending a reminder email to the course coordinators.. The descriptive statistic help them decide the benchmark of performance in the competition and can help them re-evaluate the guidelines of the competition if the need arises.
 
 **Statistics provided**
-* Top Completed Levels
-* Top Uncompleted Levels
-* Levels with Highest Average Playtime
-* Median Levels Completed
-* Average Levels Completed
-* Number of each Level Completed in last 7 Days
+* Median of Users Total Achievements in Cohort
+* Median of Total Levels Attempted in Cohort
+* Median of Total Playtime 
+* Median of Total Completed Playtime
+* Median of Total Completed Levels 
+* Number of Users in each Course for the specific Cohort
 
 #### 2.3.4 Program Supervisor
 **Who are they?**
-The Program Supervisors are the people who are in charge of the whole program. These individuals will be provided with the overall view of the CodeCombat statistics.
+The Program Supervisors are the people who are in charge of the whole program. These individuals will be provided with the overall view of the CodeCombat statistics, as well as the number of users on different platforms, including the Achievements Application.
 
 **What are they looking for?**
-The Program Supervisors will be interested in keeping track of the total number of users registered on the platform at any time. This is so that they can monitor the overall usage of CodeCombat. Additionally, they will be concerned about the most played levels and levels that are not played as much. This helps them identify possible alterations to the levels if there exist anomalies in levels that are played.
+The Program Supervisors will be interested in keeping track of the total number of users registered on the platform at any time. This is so that they can monitor the overall usage of CodeCombat. They will also be looking to track the number of users who are also users on other platforms like IVLE, Moodle so that they can evaluate the effectiveness of integrating the Achievements Application with these other platforms.
 
 **How does the application provide what they need?**
-The analytics for the overall view will allow supervisors to see at a glance the number of users signed on the platform. The levels flagged to be uncompleted the most will alert supervisors that they may be an issue with the level or if the level is too difficult considering the progress of levels. In such a case, guiding pointers can be included in the previous levels or in the level itself.
+By looking at the median statistics of most data available from CodeCombat, like the number of levels attempted and completed, the playtime spent on CodeCombat, the Program Supervisor is able to monitor the progress of the purpose behind CodeCombat, which is used for the Singapore National Coding Championships itself. For example, by looking at the Composed Chart of the top and bottom levels completed on CodeCombat, along with the average playtime spent on these levels, the Program Supervisor will be able to nitpick which levels are considered easy, or hard, so as to come up with the specifications of challenging levels to be included in the coding championships.
 
 **Statistics provided**
-* Total Number of Users on the Platform
-* Top Completed Levels
-* Top Completed Levels by Playtime
-* Top Uncompleted Levels by Count
-* Top Uncompleted Levels by Playtime
+* Number of Users on Different Platforms (IVLE, Achievements, CodeCombat, Moodle)
+* Number of Users on Achievements for the different courses
+* Median of Achievements, Levels Attempted, Total Playtime on CodeCombat.
+* Top 20 Completed Levels on CodeCombat, along with their average playtime
+* Top 20 Levels Attempted with Highest Average Playtime, along with their average playtime spent
+* Top Uncompleted Levels across all Cohorts.
 
-
-
-
-The analysis results are targeted at the instructors and mentors using the Achievements application, and are only granted “read” access to our database. The information presented through the AAA software is entirely factual and unbiased.
+The analysis results are currently available to any users of the Achievements Analytics Application. There is currently no verification of the user implemented, though future plans are to migrate the Achievements Analytics Applications to be integrated in the Achievements application itself. The information presented through the AAA software is entirely factual and unbiased.
 ## ---------------------------------------------------------------------------------
 ### 2.4 Software Architecture
 
@@ -126,11 +124,11 @@ The analysis results are targeted at the instructors and mentors using the Achie
 For our software, we are designing and implementing the ‘AAA User Interface’, ‘AAA Database’ and ‘Notebook’ modules.
 #### 2.5.1 AAA User Interface
 **Platform**: Web Application
-**Implemented using**: React.js
+**Implemented using**: React.js, JavaScript, HTML
 
 **Requirements:**
 * Display latest results of descriptive analytics through visual tools
-* Wait time to retrieve and display results does not exceed 10 seconds
+* Wait time to retrieve and display results does not exceed 5 seconds
 * Zero software display problems by week 13 implementation
 * Zero development and maintenance cost
 
@@ -139,9 +137,13 @@ For our software, we are designing and implementing the ‘AAA User Interface’
 * Retrieve information from database
 * Displays information through visual tools
 * Displays information according to user persona.
+* Enter CodeCombat user ID to retrieve charts instantly
 
 **Features:**
 * Navigation buttons to switch between the 4 views
+* Ability to search for specific user progress on CodeCombat
+* Compare user's progress with the rest of the course
+* Quick integration with Achivements Application enabled with similar interface and developement template
 
 **Module-View Controller**
 ![Module-View Controller](docs/Slide2.JPG)
@@ -165,7 +167,7 @@ For our software, we are designing and implementing the ‘AAA User Interface’
 
 **Requirements:**
 * Weekly descriptive analysis of event logs
-* Weekly update of database
+* Weekly update of Firebase Realtime Database
 * Read data in ‘json’ format
 * Write data in ‘json’ format
 
@@ -223,5 +225,9 @@ Upon completion of all iterations, a final round of extensive testing would be c
 | 24th-26th Feb | Familiarisation of resources for AAA software development |
 | 1st March | First iteration begins - ‘AAA user interface’ module |
 | 11th March  | Deployed AAA user interface model |
+| 16th April | Added search functionality for user view |
+| 17th April | Selection of specific course/cohort allowed |
+| 18th April | Added more charts into AAA |
+| 19th April | Application Deployed on Firebase |
 
 ## ====================================================
