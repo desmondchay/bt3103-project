@@ -1,10 +1,14 @@
 ## Links & Instructions:
 + [Demo](http://demos.creative-tim.com/material-dashboard/examples/dashboard.html)
 The application has a straight forward interface, with 4 different views for 4 different kinds of users.
-* Click on Student to look at statistics and charts targeted at students/learners of CodeCombat & Achievements 
-* Click on Course for to look at statistics and charts targeted at teachers/coordinators
-* Click on Cohort for to look at statistics and charts targeted at managers/coordinators
-* Click on Overall for to look at statistics and charts targeted at the developer of the Analytics Application or the overall coordinator of the National Coding Championships
+
+Click on Student to look at statistics and charts targeted at students/learners of CodeCombat & Achievements 
+
+Click on Course for to look at statistics and charts targeted at teachers/coordinators
+
+Click on Cohort for to look at statistics and charts targeted at managers/coordinators
+
+Click on Overall for to look at statistics and charts targeted at the developer of the Analytics Application or the overall coordinator of the National Coding Championships
 
 + [Video Walkthrough](http://www.creative-tim.com/product/material-kit?ref=github-md-free)
 
