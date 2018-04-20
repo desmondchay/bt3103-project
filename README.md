@@ -1,4 +1,4 @@
-﻿## ====================================================
+﻿﻿## ====================================================
 # Documentation
 
 ## 1. Preface
@@ -120,7 +120,7 @@ The analysis results are targeted at the instructors and mentors using the Achie
 ## ---------------------------------------------------------------------------------
 ### 2.4 Software Architecture
 
-![Software Architecture](Insert Image Link Here )
+![Software Architecture](docs/Slide1.JPG)
 ## ---------------------------------------------------------------------------------
 ### 2.5 Module Specifications
 For our software, we are designing and implementing the ‘AAA User Interface’, ‘AAA Database’ and ‘Notebook’ modules.
@@ -144,7 +144,7 @@ For our software, we are designing and implementing the ‘AAA User Interface’
 * Navigation buttons to switch between the 4 views
 
 **Module-View Controller**
-![Module-View Controller](Insert Image Link Here )
+![Module-View Controller](docs/Slide2.JPG)
 
 #### 2.5.2 AAA Database
 **Platform:** Firebase
